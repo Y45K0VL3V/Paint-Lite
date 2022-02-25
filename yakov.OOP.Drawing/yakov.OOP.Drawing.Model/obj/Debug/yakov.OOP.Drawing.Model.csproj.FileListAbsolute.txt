@@ -1,0 +1,6 @@
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.Model\bin\Debug\yakov.OOP.Drawing.Model.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.Model\bin\Debug\yakov.OOP.Drawing.Model.pdb
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.Model\obj\Debug\yakov.OOP.Drawing.Model.csproj.AssemblyReference.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.Model\obj\Debug\yakov.OOP.Drawing.Model.csproj.CoreCompileInputs.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.Model\obj\Debug\yakov.OOP.Drawing.Model.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.Model\obj\Debug\yakov.OOP.Drawing.Model.pdb

@@ -1,0 +1,9 @@
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\bin\Debug\yakov.OOP.Drawing.ViewModel.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\bin\Debug\yakov.OOP.Drawing.ViewModel.pdb
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\bin\Debug\yakov.OOP.Drawing.Model.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\bin\Debug\yakov.OOP.Drawing.Model.pdb
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\obj\Debug\yakov.OOP.Drawing.ViewModel.csproj.AssemblyReference.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\obj\Debug\yakov.OOP.Drawing.ViewModel.csproj.CoreCompileInputs.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\obj\Debug\yakov.OOP.Drawing.ViewModel.csproj.CopyComplete
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\obj\Debug\yakov.OOP.Drawing.ViewModel.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.ViewModel\obj\Debug\yakov.OOP.Drawing.ViewModel.pdb
