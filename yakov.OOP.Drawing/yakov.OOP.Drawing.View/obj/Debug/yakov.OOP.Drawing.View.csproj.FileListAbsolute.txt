@@ -1,0 +1,16 @@
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\yakov.OOP.Drawing.View.exe.config
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\yakov.OOP.Drawing.View.exe
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\yakov.OOP.Drawing.View.pdb
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View.csproj.AssemblyReference.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View.csproj.SuggestedBindingRedirects.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\MainWindow.g.cs
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\App.g.cs
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View_MarkupCompile.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View_MarkupCompile.lref
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\MainWindow.baml
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View.g.resources
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View.Properties.Resources.resources
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View.csproj.GenerateResource.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View.csproj.CoreCompileInputs.cache
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View.exe
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yakov.OOP.Drawing.View.pdb
