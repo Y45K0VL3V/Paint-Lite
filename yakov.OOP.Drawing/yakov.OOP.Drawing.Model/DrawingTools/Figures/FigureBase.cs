@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
-    public class FigureBase
+    public class FigureBase: Tool
     {
         public Point MouseLeftDownPos { get; set; }
         

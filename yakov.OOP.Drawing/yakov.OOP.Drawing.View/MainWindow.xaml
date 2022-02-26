@@ -4,12 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:yakov.OOP.Drawing.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <!-- Tools panel -->
+        <materialDesign:Card Grid.Row="0" Background="{StaticResource PrimaryHueDarkBrush}">
+            <Grid>
+                <TextBlock Text="Color" Foreground="{StaticResource SecondaryHueMidBrush}" HorizontalAlignment="Left" Margin="16,0,0,0"/>
+            </Grid>
+        </materialDesign:Card>
+        
+        <!-- Drawing space -->
+        <Canvas Grid.Row="1">
+        </Canvas>
+
+        <!-- Choosing color -->
+        <Border x:Name="borderColorPick" Grid.RowSpan="2" 
+                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16" 
+                MaxHeight="200" MaxWidth="200" MinHeight="38"
+                BorderBrush="Black" BorderThickness="1" CornerRadius="5"
+                Background="Transparent"
+                MouseEnter="borderColorPick_MouseEnter" MouseLeave="borderColorPick_MouseLeave">
+            <materialDesign:ColorPicker Name="colorPick" Color="{Binding UsingColor, Mode=OneWayToSource}"/>
+        </Border>
     </Grid>
 </Window>

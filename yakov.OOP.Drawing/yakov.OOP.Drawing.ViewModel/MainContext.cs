@@ -4,12 +4,28 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
+using yakov.OOP.Drawing.Model.DrawingTools;
 
 namespace yakov.OOP.Drawing.ViewModel
 {
     public class MainContext : INotifyPropertyChanged
     {
-        
+        // Contain currently used drawing tool.
+        private Tool _usingTool;
+        public Tool UsingTool
+        {
+            get { return _usingTool; }  
+            set 
+            { 
+                _usingTool = value;
+                OnPropertyChanged("UsingTool");
+            }
+        }
+
+        public Color UsingColor { get; set; }
+
+        // INotifyPropertyChanged realisation.
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string prop = "")
         {
