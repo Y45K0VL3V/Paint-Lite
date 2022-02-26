@@ -12,8 +12,8 @@ namespace yakov.OOP.Drawing.ViewModel
     public class MainContext : INotifyPropertyChanged
     {
         // Contain currently used drawing tool.
-        private Tool _usingTool;
-        public Tool UsingTool
+        private object _usingTool;
+        public object UsingTool
         {
             get { return _usingTool; }  
             set 
