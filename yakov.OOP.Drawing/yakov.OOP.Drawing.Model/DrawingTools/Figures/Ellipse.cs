@@ -13,9 +13,14 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
         {
         }
         
-        private void InitGraphObject(Point mouseDownPos, Point mouseUpPos)
+        protected override void InitGraphObject(Point mouseDownPos, Point mouseUpPos)
         {
+            var graphElement = new System.Windows.Shapes.Ellipse();
+            
+            graphElement.Width = Math.Abs(mouseDownPos.X - mouseUpPos.X);
+            graphElement.Height = Math.Abs(mouseDownPos.Y - mouseUpPos.Y);
 
+            Graph = graphElement;
         }
     }
 }

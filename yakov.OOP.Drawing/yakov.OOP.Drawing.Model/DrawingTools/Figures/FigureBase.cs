@@ -8,12 +8,13 @@ using System.Windows.Shapes;
 
 namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
-    abstract public class FigureBase
+    public class FigureBase
     {
-        public FigureBase(Point mouseDownPos, Point mouseUpPos)
+        protected FigureBase(Point mouseDownPos, Point mouseUpPos)
         {
             MouseLeftDownPos = mouseDownPos;
             MouseLeftUpPos = mouseUpPos;
+            InitGraphObject(mouseDownPos, mouseUpPos);
         }
 
         public Point MouseLeftDownPos { get; set; }
@@ -22,6 +23,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 
         public Shape Graph { get; set; }
 
+        // Creates graph view of figure.
         protected virtual void InitGraphObject(Point mouseDownPos, Point mouseUpPos)
         {
         }

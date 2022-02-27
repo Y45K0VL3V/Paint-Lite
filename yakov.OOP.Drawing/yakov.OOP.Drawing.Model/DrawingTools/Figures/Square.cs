@@ -12,5 +12,17 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
         public Square(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }
+
+        protected override void InitGraphObject(Point mouseDownPos, Point mouseUpPos)
+        {
+            var graphElement = new System.Windows.Shapes.Rectangle();
+
+            // Square side = min(height, width).
+            var height = Math.Abs(mouseDownPos.Y - mouseUpPos.Y);
+            var width = Math.Abs(mouseDownPos.X - mouseUpPos.X);
+            graphElement.Width = graphElement.Height = height > width ? width : height;
+
+            Graph = graphElement;
+        }
     }
 }

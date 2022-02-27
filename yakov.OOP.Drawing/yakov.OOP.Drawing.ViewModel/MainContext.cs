@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 using yakov.OOP.Drawing.Model.DrawingTools;
+using yakov.OOP.Drawing.Model.DrawingTools.Figures;
 
 namespace yakov.OOP.Drawing.ViewModel
 {
