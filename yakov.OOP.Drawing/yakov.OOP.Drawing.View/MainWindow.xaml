@@ -17,44 +17,44 @@
         <materialDesign:Card Grid.Row="0" Background="{StaticResource PrimaryHueDarkBrush}">
             <Grid>
                 <TextBlock Text="Color" Foreground="{StaticResource SecondaryHueMidBrush}" HorizontalAlignment="Left" Margin="16,0,0,0"/>
-                <ListBox Style="{StaticResource MaterialDesignChoiceChipListBox}" Margin="150,0,0,0" VerticalAlignment="Center" FontSize="14">
-                    <ListBoxItem>
+                <ListBox Style="{StaticResource MaterialDesignChoiceChipListBox}" Margin="150,0,0,0" VerticalAlignment="Center" FontSize="14" SelectedIndex="{Binding UsingTool}">
+                    <ListBoxItem IsSelected="{Binding IsPenSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Pen" VerticalAlignment="Center"/>
                             <materialDesign:PackIcon Kind="PencilOutline" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem>
+                    <ListBoxItem IsSelected="{Binding IsLineSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Line" VerticalAlignment="Center"/>
-                            <materialDesign:PackIcon Kind="Abc" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Minus" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem>
+                    <ListBoxItem IsSelected="{Binding IsRectSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Rect" VerticalAlignment="Center"/>
                             <materialDesign:PackIcon Kind="RectangleOutline" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem>
+                    <ListBoxItem IsSelected="{Binding IsRectRoundedSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Rect Rounded" VerticalAlignment="Center"/>
                             <materialDesign:PackIcon Kind="SquareRoundedOutline" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem>
+                    <ListBoxItem IsSelected="{Binding IsSquareSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Square" VerticalAlignment="Center"/>
                             <materialDesign:PackIcon Kind="SquareOutline" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem>
+                    <ListBoxItem IsSelected="{Binding IsEllipseSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Ellipse" VerticalAlignment="Center"/>
                             <materialDesign:PackIcon Kind="EllipseOutline" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem>
+                    <ListBoxItem IsSelected="{Binding IsCircleSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Circle" VerticalAlignment="Center"/>
                             <materialDesign:PackIcon Kind="CircleOutline" VerticalAlignment="Center"/>
@@ -66,6 +66,7 @@
         
         <!-- Drawing space -->
         <Canvas Grid.Row="1">
+            <Rectangle Height="100" Width="125"/>
         </Canvas>
 
         <!-- Choosing color -->
