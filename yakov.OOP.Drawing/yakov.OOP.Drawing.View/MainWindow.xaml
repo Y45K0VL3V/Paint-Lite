@@ -9,7 +9,7 @@
         Title="MainWindow" MinHeight="450" MinWidth="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -17,6 +17,50 @@
         <materialDesign:Card Grid.Row="0" Background="{StaticResource PrimaryHueDarkBrush}">
             <Grid>
                 <TextBlock Text="Color" Foreground="{StaticResource SecondaryHueMidBrush}" HorizontalAlignment="Left" Margin="16,0,0,0"/>
+                <ListBox Style="{StaticResource MaterialDesignChoiceChipListBox}" Margin="150,0,0,0" VerticalAlignment="Center" FontSize="14">
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Pen" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="PencilOutline" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Line" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Abc" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Rect" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="RectangleOutline" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Rect Rounded" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="SquareRoundedOutline" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Square" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="SquareOutline" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Ellipse" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="EllipseOutline" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Circle" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="CircleOutline" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
             </Grid>
         </materialDesign:Card>
         
