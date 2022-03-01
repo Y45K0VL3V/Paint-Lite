@@ -52,6 +52,7 @@
     <Compile Include="DrawingTools\Figures\RoundedRectangle.cs" />
     <Compile Include="DrawingTools\Figures\Square.cs" />
     <Compile Include="DrawingTools\Pen.cs" />
+    <Compile Include="DrawingTools\Tool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand.cs" />
   </ItemGroup>

@@ -8,8 +8,10 @@ using System.Windows.Shapes;
 
 namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
-    public class FigureBase
+    public class FigureBase : Tool
     {
+        public override ToolType Type { get; }
+
         protected FigureBase(Point mouseDownPos, Point mouseUpPos)
         {
             MouseLeftDownPos = mouseDownPos;

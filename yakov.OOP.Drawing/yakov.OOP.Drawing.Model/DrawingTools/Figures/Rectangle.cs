@@ -9,6 +9,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
     public class Rectangle : FigureBase
     {
+        public override ToolType Type { get; } = ToolType.Rect;
         public Rectangle(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }

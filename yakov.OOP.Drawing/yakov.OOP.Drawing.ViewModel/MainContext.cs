@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Forms;
+using System.Windows.Input;
 using System.Windows.Media;
 using yakov.OOP.Drawing.Model;
 using yakov.OOP.Drawing.Model.DrawingTools;
@@ -13,18 +15,17 @@ using yakov.OOP.Drawing.Model.DrawingTools.Figures;
 
 namespace yakov.OOP.Drawing.ViewModel
 {
-    public enum ToolType
-    {
-        Pen,
-        Line,
-        Rect,
-        RectRounded,
-        Square,
-        Ellipse,
-        Circle
-    }
     public class MainContext : INotifyPropertyChanged
     {
+        public MainContext(Canvas drawField)
+        {
+            _drawField = drawField;
+        }
+
+        // Contain canvas, where all drawings appear.
+        private Canvas _drawField;
+
+        #region Tool choosing.
         // Get tool type by index.
         // Index - selected item in view.
         private ToolType? GetToolByIndex(int? index)
@@ -59,20 +60,40 @@ namespace yakov.OOP.Drawing.ViewModel
                 OnPropertyChanged("UsingTool");
             }
         }
+        #endregion
 
         public Color UsingColor { get; set; }
 
-        private RelayCommand com;
-        public RelayCommand Com
+        #region Detecting canvas activity
+        private Point leftTopPos;
+        private Point rightBottomPos;
+
+        private RelayCommand _leftButtonDown;
+        public RelayCommand LeftButtonDown
         {
             get
             {
-                return com ?? (com = new RelayCommand(obj =>
+                // Invokes, when mouse left button down.
+                return _leftButtonDown ?? (_leftButtonDown = new RelayCommand(obj =>
                 {
-                    
+                    leftTopPos = Mouse.GetPosition(_drawField);
                 }));
             }
         }
+
+        private RelayCommand _leftButtonUp;
+        public RelayCommand LeftButtonUp
+        {
+            get
+            {
+                // Invokes, when mouse left button up.
+                return _leftButtonUp ?? (_leftButtonUp = new RelayCommand(obj =>
+                {
+                    rightBottomPos = Mouse.GetPosition(_drawField);
+                }));
+            }
+        }
+        #endregion
 
         // INotifyPropertyChanged realisation.
         public event PropertyChangedEventHandler PropertyChanged;

@@ -9,6 +9,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
     public class Ellipse : FigureBase
     {
+        public override ToolType Type { get; } = ToolType.Ellipse;
         public Ellipse(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }

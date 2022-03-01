@@ -25,3 +25,10 @@ C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\yak
 C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\obj\Debug\App.baml
 C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\yakov.OOP.Drawing.Model.dll
 C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\yakov.OOP.Drawing.Model.pdb
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\en\Microsoft.Windows.Design.Interaction.resources.dll
+C:\Учёба else\ООП\yakov.OOP.Drawing\yakov.OOP.Drawing.View\bin\Debug\en\Microsoft.Windows.Design.Extensibility.resources.dll

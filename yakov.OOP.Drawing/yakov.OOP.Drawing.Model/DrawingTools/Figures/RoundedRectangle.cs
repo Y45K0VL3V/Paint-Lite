@@ -9,6 +9,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
     public class RoundedRectangle : Rectangle
     {
+        public override ToolType Type { get; } = ToolType.RectRounded;
         public RoundedRectangle(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }

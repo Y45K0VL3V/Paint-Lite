@@ -25,7 +25,7 @@ namespace yakov.OOP.Drawing.View
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainContext();
+            DataContext = new MainContext(this.canvasDrawingSpace);
         }
 
         // Animate dropping color picker panel.

@@ -9,6 +9,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
     public class Square : Rectangle
     {
+        public override ToolType Type { get; } = ToolType.Square;
         public Square(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:yakov.OOP.Drawing.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="450" MinWidth="800">
     <Grid>
@@ -65,8 +66,15 @@
         </materialDesign:Card>
         
         <!-- Drawing space -->
-        <Canvas Grid.Row="1">
-            <Rectangle Height="100" Width="125"/>
+        <Canvas x:Name="canvasDrawingSpace" Grid.Row="1">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeftButtonDown">
+                    <i:InvokeCommandAction Command="{Binding LeftButtonDown}"/>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseLeftButtonUp">
+                    <i:InvokeCommandAction Command="{Binding LeftButtonUp}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
         </Canvas>
 
         <!-- Choosing color -->

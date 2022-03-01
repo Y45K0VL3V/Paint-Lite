@@ -9,6 +9,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
     public class Circle : Ellipse
     {
+        public override ToolType Type { get; } = ToolType.Circle;
         public Circle(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }
