@@ -7,9 +7,10 @@ using System.Windows;
 
 namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
+    [ToolTypeAttribute(ToolType.Line)]
     public class Line : FigureBase
     {
-        public override ToolType Type { get; } = ToolType.Line;
+        public override ToolType ToolType { get; } = ToolType.Line;
         public Line(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }

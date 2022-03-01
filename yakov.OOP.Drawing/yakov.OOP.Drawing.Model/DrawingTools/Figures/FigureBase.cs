@@ -10,7 +10,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
     public class FigureBase : Tool
     {
-        public override ToolType Type { get; }
+        public override ToolType ToolType { get; }
 
         protected FigureBase(Point mouseDownPos, Point mouseUpPos)
         {

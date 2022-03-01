@@ -7,9 +7,10 @@ using System.Windows;
 
 namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
+    [ToolTypeAttribute(ToolType.Ellipse)]
     public class Ellipse : FigureBase
     {
-        public override ToolType Type { get; } = ToolType.Ellipse;
+        public override ToolType ToolType { get; } = ToolType.Ellipse;
         public Ellipse(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }

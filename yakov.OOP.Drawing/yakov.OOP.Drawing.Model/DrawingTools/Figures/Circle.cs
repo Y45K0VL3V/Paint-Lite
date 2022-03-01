@@ -7,9 +7,10 @@ using System.Windows;
 
 namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
+    [ToolTypeAttribute(ToolType.Circle)]
     public class Circle : Ellipse
     {
-        public override ToolType Type { get; } = ToolType.Circle;
+        public override ToolType ToolType { get; } = ToolType.Circle;
         public Circle(Point mouseDownPos, Point mouseUpPos) : base(mouseDownPos, mouseUpPos)
         {
         }

@@ -65,8 +65,8 @@ namespace yakov.OOP.Drawing.ViewModel
         public Color UsingColor { get; set; }
 
         #region Detecting canvas activity
-        private Point leftTopPos;
-        private Point rightBottomPos;
+        private Point _leftTopPos;
+        private Point _rightBottomPos;
 
         private RelayCommand _leftButtonDown;
         public RelayCommand LeftButtonDown
@@ -76,7 +76,7 @@ namespace yakov.OOP.Drawing.ViewModel
                 // Invokes, when mouse left button down.
                 return _leftButtonDown ?? (_leftButtonDown = new RelayCommand(obj =>
                 {
-                    leftTopPos = Mouse.GetPosition(_drawField);
+                    _leftTopPos = Mouse.GetPosition(_drawField);
                 }));
             }
         }
@@ -89,7 +89,7 @@ namespace yakov.OOP.Drawing.ViewModel
                 // Invokes, when mouse left button up.
                 return _leftButtonUp ?? (_leftButtonUp = new RelayCommand(obj =>
                 {
-                    rightBottomPos = Mouse.GetPosition(_drawField);
+                    _rightBottomPos = Mouse.GetPosition(_drawField);
                 }));
             }
         }

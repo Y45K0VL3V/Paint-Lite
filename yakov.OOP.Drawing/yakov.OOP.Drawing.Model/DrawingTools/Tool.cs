@@ -18,6 +18,6 @@ namespace yakov.OOP.Drawing.Model.DrawingTools
     }
     abstract public class Tool
     {
-        public virtual ToolType Type { get; }
+        public virtual ToolType ToolType { get; }
     }
 }
