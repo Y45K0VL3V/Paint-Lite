@@ -12,6 +12,7 @@ using System.Windows.Media;
 using yakov.OOP.Drawing.Model;
 using yakov.OOP.Drawing.Model.DrawingTools;
 using yakov.OOP.Drawing.Model.DrawingTools.Figures;
+using yakov.OOP.Drawing.Model.GraphControls;
 
 namespace yakov.OOP.Drawing.ViewModel
 {
@@ -62,7 +63,20 @@ namespace yakov.OOP.Drawing.ViewModel
         }
         #endregion
 
-        public Color UsingColor { get; set; }
+        public Color UsingColor
+        {
+            set
+            {
+                if (_usingTool == ToolType.Pen)
+                {
+                    Model.DrawingTools.Pen.Color = value;
+                }
+                else
+                {
+                    Model.DrawingTools.Brush.Color = value;
+                }
+            }
+        }
 
         #region Detecting canvas activity
         private Point _leftTopPos;
@@ -90,10 +104,15 @@ namespace yakov.OOP.Drawing.ViewModel
                 return _leftButtonUp ?? (_leftButtonUp = new RelayCommand(obj =>
                 {
                     _rightBottomPos = Mouse.GetPosition(_drawField);
+                    DrawFigure();
                 }));
             }
         }
         #endregion
+        private void DrawFigure()
+        {
+            FigureDrawingControl.Draw(_drawField, _leftTopPos, _rightBottomPos, _usingTool);
+        }
 
         // INotifyPropertyChanged realisation.
         public event PropertyChangedEventHandler PropertyChanged;

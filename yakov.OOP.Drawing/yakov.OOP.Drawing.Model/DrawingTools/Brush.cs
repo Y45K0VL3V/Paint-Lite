@@ -7,10 +7,10 @@ using System.Windows.Media;
 
 namespace yakov.OOP.Drawing.Model.DrawingTools
 {
-    [ToolTypeAttribute(ToolType.Pen)]
-    public class Pen: Tool
+    [ToolTypeAttribute(ToolType.Brush)]
+    public class Brush: Tool
     {
-        public override ToolType ToolType { get; } = ToolType.Pen;
+        public override ToolType ToolType { get; } = ToolType.Brush;
         public static Color Color { get; set; }
         public static int Width { get; set; }
     }

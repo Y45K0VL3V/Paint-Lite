@@ -9,6 +9,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools
     public enum ToolType
     {
         Pen,
+        Brush,
         Line,
         Rect,
         RectRounded,

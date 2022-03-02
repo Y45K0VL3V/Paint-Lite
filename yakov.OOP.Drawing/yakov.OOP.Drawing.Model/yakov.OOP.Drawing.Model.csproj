@@ -44,6 +44,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrawingTools\Brush.cs" />
     <Compile Include="DrawingTools\Figures\Circle.cs" />
     <Compile Include="DrawingTools\Figures\Ellipse.cs" />
     <Compile Include="DrawingTools\Figures\FigureBase.cs" />

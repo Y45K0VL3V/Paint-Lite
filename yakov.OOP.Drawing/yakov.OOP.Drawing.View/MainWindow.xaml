@@ -25,6 +25,12 @@
                             <materialDesign:PackIcon Kind="PencilOutline" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListBoxItem>
+                    <ListBoxItem IsSelected="{Binding IsPenSelected, Mode=OneWayToSource}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Brush" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Brush" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListBoxItem>
                     <ListBoxItem IsSelected="{Binding IsLineSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Line" VerticalAlignment="Center"/>
@@ -66,7 +72,7 @@
         </materialDesign:Card>
         
         <!-- Drawing space -->
-        <Canvas x:Name="canvasDrawingSpace" Grid.Row="1">
+        <Canvas x:Name="canvasDrawingSpace" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseLeftButtonDown">
                     <i:InvokeCommandAction Command="{Binding LeftButtonDown}"/>
