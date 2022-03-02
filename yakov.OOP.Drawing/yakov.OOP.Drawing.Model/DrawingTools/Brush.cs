@@ -11,7 +11,6 @@ namespace yakov.OOP.Drawing.Model.DrawingTools
     public class Brush: Tool
     {
         public override ToolType ToolType { get; } = ToolType.Brush;
-        public static Color Color { get; set; }
-        public static int Width { get; set; }
+        public static Color Color { get; set; } = Color.FromRgb(255,255,255);
     }
 }

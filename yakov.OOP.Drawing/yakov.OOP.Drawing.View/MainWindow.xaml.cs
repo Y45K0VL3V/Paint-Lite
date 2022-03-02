@@ -59,10 +59,5 @@ namespace yakov.OOP.Drawing.View
         {
             OpenCloseColorPicker(borderColorPick.Height, borderColorPick.MinHeight, borderColorPick);
         }
-
-        private void canvasDrawingSpace_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("afsa");
-        }
     }
 }

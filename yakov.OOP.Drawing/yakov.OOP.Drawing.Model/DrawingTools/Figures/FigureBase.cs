@@ -8,7 +8,7 @@ using System.Windows.Shapes;
 
 namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
 {
-    public class FigureBase : Tool
+    public abstract class FigureBase : Tool
     {
         public override ToolType ToolType { get; }
 
@@ -26,8 +26,6 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
         public Shape Graph { get; set; }
 
         // Creates graph view of figure.
-        protected virtual void InitGraphObject(Point mouseDownPos, Point mouseUpPos)
-        {
-        }
+        protected abstract void InitGraphObject(Point mouseDownPos, Point mouseUpPos);
     }
 }

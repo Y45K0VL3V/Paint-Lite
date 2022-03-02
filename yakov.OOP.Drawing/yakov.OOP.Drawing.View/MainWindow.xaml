@@ -72,7 +72,7 @@
         </materialDesign:Card>
         
         <!-- Drawing space -->
-        <Canvas x:Name="canvasDrawingSpace" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White">
+        <Canvas x:Name="canvasDrawingSpace" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" LostMouseCapture="canvasDrawingSpace_LostMouseCapture">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseLeftButtonDown">
                     <i:InvokeCommandAction Command="{Binding LeftButtonDown}"/>

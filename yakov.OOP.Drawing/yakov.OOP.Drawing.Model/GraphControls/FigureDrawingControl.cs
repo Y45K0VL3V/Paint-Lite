@@ -52,6 +52,8 @@ namespace yakov.OOP.Drawing.Model.GraphControls
         // Set left top position for figure on canvas.
         private static void SetFigurePos(Point leftTopPos, Point rightBottomPos, FigureBase figure)
         {
+            if (figure.ToolType == ToolType.Line)
+                return;
             Canvas.SetLeft(figure.Graph, leftTopPos.X > rightBottomPos.X ? rightBottomPos.X : leftTopPos.X);
             Canvas.SetTop(figure.Graph, leftTopPos.Y > rightBottomPos.Y ? rightBottomPos.Y : leftTopPos.Y);
         }

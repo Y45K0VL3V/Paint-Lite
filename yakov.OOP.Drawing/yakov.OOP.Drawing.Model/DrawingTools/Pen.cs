@@ -11,7 +11,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools
     public class Pen: Tool
     {
         public override ToolType ToolType { get; } = ToolType.Pen;
-        public static Color Color { get; set; }
-        public static int Width { get; set; }
+        public static Color Color { get; set; } = Color.FromRgb(0, 0, 0);
+        public static int Width { get; set; } = 5;
     }
 }

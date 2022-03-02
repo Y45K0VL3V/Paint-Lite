@@ -56,6 +56,7 @@
     <Compile Include="DrawingTools\Tool.cs" />
     <Compile Include="DrawingTools\ToolTypeAttribute.cs" />
     <Compile Include="GraphControls\FigureDrawingControl.cs" />
+    <Compile Include="GraphControls\StylusDrawingControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelayCommand.cs" />
   </ItemGroup>

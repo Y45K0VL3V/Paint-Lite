@@ -45,7 +45,7 @@ namespace yakov.OOP.Drawing.ViewModel
         }
 
         // Contain currently used drawing tool.
-        private ToolType? _usingTool;
+        private ToolType? _usingTool = ToolType.Pen;
         public int? UsingTool
         {
             get 

@@ -17,7 +17,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools
         Ellipse,
         Circle
     }
-    abstract public class Tool
+    public abstract class Tool
     {
         public virtual ToolType ToolType { get; }
     }
