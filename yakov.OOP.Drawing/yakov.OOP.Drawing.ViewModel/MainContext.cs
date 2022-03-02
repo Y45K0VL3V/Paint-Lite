@@ -82,6 +82,8 @@ namespace yakov.OOP.Drawing.ViewModel
         private Point _leftTopPos;
         private Point _rightBottomPos;
 
+        private bool _isLeftDown = false;
+
         private RelayCommand _leftButtonDown;
         public RelayCommand LeftButtonDown
         {
@@ -90,6 +92,7 @@ namespace yakov.OOP.Drawing.ViewModel
                 // Invokes, when mouse left button down.
                 return _leftButtonDown ?? (_leftButtonDown = new RelayCommand(obj =>
                 {
+                    _isLeftDown = true;
                     _leftTopPos = Mouse.GetPosition(_drawField);
                 }));
             }
@@ -103,8 +106,42 @@ namespace yakov.OOP.Drawing.ViewModel
                 // Invokes, when mouse left button up.
                 return _leftButtonUp ?? (_leftButtonUp = new RelayCommand(obj =>
                 {
-                    _rightBottomPos = Mouse.GetPosition(_drawField);
-                    DrawFigure();
+                    if (_isLeftDown)
+                    {
+                        _rightBottomPos = Mouse.GetPosition(_drawField);
+                        DrawFigure();
+                        _isLeftDown = false;
+                    }
+                }));
+            }
+        }
+
+        private RelayCommand _leftButtonDrag;
+        public RelayCommand LeftButtonDrag
+        {
+            get
+            {
+                // Invokes, when mouse move.
+                return _leftButtonDrag ?? (_leftButtonDrag = new RelayCommand(obj =>
+                {
+                    if (!_isLeftDown)
+                        return;
+
+                    if (_usingTool <= ToolType.Brush)
+                        StylusDrawingControl.Draw(_drawField, Mouse.GetPosition(_drawField), _usingTool);
+                }));
+            }
+        }
+
+        private RelayCommand _mouseLeave;
+        public RelayCommand MouseLeave
+        {
+            get
+            {
+                // Invokes, when mouse move.
+                return _mouseLeave ?? (_mouseLeave = new RelayCommand(obj =>
+                {
+                    _isLeftDown = false;
                 }));
             }
         }
@@ -114,7 +151,7 @@ namespace yakov.OOP.Drawing.ViewModel
             FigureDrawingControl.Draw(_drawField, _leftTopPos, _rightBottomPos, _usingTool);
         }
 
-        // INotifyPropertyChanged realisation.
+        // INotifyPropertyChanged realization.
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string prop = "")
         {

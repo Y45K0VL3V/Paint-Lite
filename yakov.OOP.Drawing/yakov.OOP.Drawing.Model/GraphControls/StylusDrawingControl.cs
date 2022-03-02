@@ -13,7 +13,7 @@ namespace yakov.OOP.Drawing.Model.GraphControls
 {
     public class StylusDrawingControl
     {
-        public static void Draw(Canvas drawingField, Point pos, ToolType toolType)
+        public static void Draw(Canvas drawingField, Point pos, ToolType? toolType)
         {
             var dot = new System.Windows.Shapes.Ellipse();
             dot.Height = dot.Width = DrawingTools.Pen.Width;

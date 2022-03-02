@@ -22,7 +22,7 @@
                     <ListBoxItem IsSelected="{Binding IsPenSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Pen" VerticalAlignment="Center"/>
-                            <materialDesign:PackIcon Kind="PencilOutline" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="Pencil" VerticalAlignment="Center"/>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem IsSelected="{Binding IsPenSelected, Mode=OneWayToSource}">
@@ -72,13 +72,19 @@
         </materialDesign:Card>
         
         <!-- Drawing space -->
-        <Canvas x:Name="canvasDrawingSpace" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" LostMouseCapture="canvasDrawingSpace_LostMouseCapture">
+        <Canvas x:Name="canvasDrawingSpace" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseLeftButtonDown">
                     <i:InvokeCommandAction Command="{Binding LeftButtonDown}"/>
                 </i:EventTrigger>
                 <i:EventTrigger EventName="MouseLeftButtonUp">
                     <i:InvokeCommandAction Command="{Binding LeftButtonUp}"/>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseMove">
+                    <i:InvokeCommandAction Command="{Binding LeftButtonDrag}"/>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseLeave">
+                    <i:InvokeCommandAction Command="{Binding MouseLeave}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Canvas>
