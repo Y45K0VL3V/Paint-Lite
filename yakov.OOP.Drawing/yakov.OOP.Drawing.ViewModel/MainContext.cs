@@ -45,7 +45,7 @@ namespace yakov.OOP.Drawing.ViewModel
         }
 
         // Contain currently used drawing tool.
-        private ToolType? _usingTool = ToolType.Pen;
+        private ToolType? _usingTool = ToolType.None;
         public int? UsingTool
         {
             get 
@@ -63,20 +63,54 @@ namespace yakov.OOP.Drawing.ViewModel
         }
         #endregion
 
+        #region Tool parameters.
         public Color UsingColor
         {
             set
             {
+                if (_usingTool == ToolType.None)
+                    return;
+
                 if (_usingTool == ToolType.Pen)
                 {
-                    Model.DrawingTools.Pen.Color = value;
+                    PenColor = new SolidColorBrush(value);
                 }
                 else
                 {
-                    Model.DrawingTools.Brush.Color = value;
+                    BrushColor = new SolidColorBrush(value);
                 }
             }
         }
+
+        public SolidColorBrush PenColor
+        {
+            get { return new SolidColorBrush(Model.DrawingTools.Pen.Color); }
+            set 
+            { 
+                Model.DrawingTools.Pen.Color = value.Color;
+                OnPropertyChanged("PenColor");
+            }
+        }
+
+        public SolidColorBrush BrushColor
+        {
+            get { return new SolidColorBrush(Model.DrawingTools.Brush.Color); }
+            set 
+            { 
+                Model.DrawingTools.Brush.Color = value.Color;
+                OnPropertyChanged("BrushColor");
+            }
+        }
+
+        public int WidthText
+        {
+            get { return Model.DrawingTools.Pen.Width; }
+            set
+            {
+                Model.DrawingTools.Pen.Width = value;
+            }
+        }
+        #endregion
 
         #region Detecting canvas activity
         private Point _leftTopPos;
@@ -133,15 +167,18 @@ namespace yakov.OOP.Drawing.ViewModel
             }
         }
 
-        private RelayCommand _mouseLeave;
-        public RelayCommand MouseLeave
+        private RelayCommand _mouseCanvasEnter;
+        public RelayCommand MouseCanvasEnter
         {
             get
             {
                 // Invokes, when mouse move.
-                return _mouseLeave ?? (_mouseLeave = new RelayCommand(obj =>
+                return _mouseCanvasEnter ?? (_mouseCanvasEnter = new RelayCommand(obj =>
                 {
-                    _isLeftDown = false;
+                    if (Mouse.LeftButton == MouseButtonState.Released)
+                    {
+                        _isLeftDown = false;
+                    }
                 }));
             }
         }

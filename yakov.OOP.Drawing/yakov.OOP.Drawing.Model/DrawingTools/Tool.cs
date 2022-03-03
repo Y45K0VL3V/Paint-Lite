@@ -15,7 +15,8 @@ namespace yakov.OOP.Drawing.Model.DrawingTools
         RectRounded,
         Square,
         Ellipse,
-        Circle
+        Circle,
+        None = 999
     }
     public abstract class Tool
     {

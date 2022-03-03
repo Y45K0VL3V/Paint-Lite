@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="450" MinWidth="800">
+        Title="MainWindow" MinHeight="450" MinWidth="950">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -18,7 +18,7 @@
         <materialDesign:Card Grid.Row="0" Background="{StaticResource PrimaryHueDarkBrush}">
             <Grid>
                 <TextBlock Text="Color" Foreground="{StaticResource SecondaryHueMidBrush}" HorizontalAlignment="Left" Margin="16,0,0,0"/>
-                <ListBox Style="{StaticResource MaterialDesignChoiceChipListBox}" Margin="150,0,0,0" VerticalAlignment="Center" FontSize="14" SelectedIndex="{Binding UsingTool}">
+                <ListBox Style="{StaticResource MaterialDesignChoiceChipListBox}" Margin="150,0,0,0" VerticalAlignment="Center" Width="725" FontSize="14" SelectedIndex="{Binding UsingTool}">
                     <ListBoxItem IsSelected="{Binding IsPenSelected, Mode=OneWayToSource}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Pen" VerticalAlignment="Center"/>
@@ -68,6 +68,9 @@
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>
+                <TextBox Margin="950,0,15,0" Height="38" HorizontalAlignment="Center"
+                         materialDesign:HintAssist.Hint="Width" FontSize="14" MinWidth="0" MaxWidth="45"
+                         Text="{Binding WidthText, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/> 
             </Grid>
         </materialDesign:Card>
         
@@ -83,12 +86,17 @@
                 <i:EventTrigger EventName="MouseMove">
                     <i:InvokeCommandAction Command="{Binding LeftButtonDrag}"/>
                 </i:EventTrigger>
-                <i:EventTrigger EventName="MouseLeave">
-                    <i:InvokeCommandAction Command="{Binding MouseLeave}"/>
+                <i:EventTrigger EventName="MouseEnter">
+                    <i:InvokeCommandAction Command="{Binding MouseCanvasEnter}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Canvas>
 
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60,16,0,0">
+            <Rectangle Height="38" Width="38" RadiusX="5" RadiusY="5" Fill="{Binding PenColor}"/>
+            <Rectangle Height="38" Width="38" RadiusX="5" RadiusY="5" Margin="10,0,0,0" Fill="{Binding BrushColor}"/>
+        </StackPanel>
+        
         <!-- Choosing color -->
         <Border x:Name="borderColorPick" Grid.RowSpan="2" 
                 HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16" 
