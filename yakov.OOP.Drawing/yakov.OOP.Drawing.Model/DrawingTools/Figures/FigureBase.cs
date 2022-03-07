@@ -23,6 +23,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
         
         public Point MouseLeftUpPos { get; set; }
 
+        // Contains graph view of figure.
         public Shape Graph { get; set; }
 
         // Creates graph view of figure.

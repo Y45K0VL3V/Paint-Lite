@@ -64,6 +64,7 @@ namespace yakov.OOP.Drawing.ViewModel
         #endregion
 
         #region Tool parameters.
+        // Set color of pen/brush, depanding on chosed tool.
         public Color UsingColor
         {
             set
@@ -102,7 +103,7 @@ namespace yakov.OOP.Drawing.ViewModel
             }
         }
 
-        public int WidthText
+        public int PenWidth
         {
             get { return Model.DrawingTools.Pen.Width; }
             set
@@ -155,7 +156,7 @@ namespace yakov.OOP.Drawing.ViewModel
         {
             get
             {
-                // Invokes, when mouse move.
+                // Invokes, when mouse move & pressed left mouse button.
                 return _leftButtonDrag ?? (_leftButtonDrag = new RelayCommand(obj =>
                 {
                     if (!_isLeftDown)
@@ -172,7 +173,7 @@ namespace yakov.OOP.Drawing.ViewModel
         {
             get
             {
-                // Invokes, when mouse move.
+                // Invokes, when mouse enter canvas.
                 return _mouseCanvasEnter ?? (_mouseCanvasEnter = new RelayCommand(obj =>
                 {
                     if (Mouse.LeftButton == MouseButtonState.Released)

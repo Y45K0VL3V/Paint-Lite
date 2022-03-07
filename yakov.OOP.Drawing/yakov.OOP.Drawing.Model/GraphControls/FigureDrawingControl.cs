@@ -14,12 +14,14 @@ namespace yakov.OOP.Drawing.Model.GraphControls
 {
     public static class FigureDrawingControl
     {
+        // Draw object by FigureBase object.
         public static void Draw(Canvas drawingField, Point leftTopPos, Point rightBottomPos, FigureBase figure)
         {
             SetFigurePos(leftTopPos, rightBottomPos, figure);
             AddToCanvas(drawingField, figure);
         }
 
+        // Firstly creates FigureBase instance, then draw on canvas.
         public static void Draw(Canvas drawingField, Point leftTopPos, Point rightBottomPos, ToolType? toolType)
         {
             // If it's not a figure-tool type -> exit.
@@ -63,6 +65,7 @@ namespace yakov.OOP.Drawing.Model.GraphControls
         {
             figure.Graph.Fill = new SolidColorBrush(DrawingTools.Brush.Color);
             figure.Graph.Stroke = new SolidColorBrush(DrawingTools.Pen.Color);
+            figure.Graph.StrokeThickness = DrawingTools.Pen.Width;
             canvas.Children.Add(figure.Graph);
         }
     }

@@ -19,6 +19,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
         {
             var graphElement = new System.Windows.Shapes.Ellipse();
 
+            // Set graph parameters.
             // Circle radius = min(height, width).
             var height = Math.Abs(mouseDownPos.Y - mouseUpPos.Y);
             var width = Math.Abs(mouseDownPos.X - mouseUpPos.X);

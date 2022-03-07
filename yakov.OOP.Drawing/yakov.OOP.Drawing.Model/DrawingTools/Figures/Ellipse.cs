@@ -19,6 +19,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
         {
             var graphElement = new System.Windows.Shapes.Ellipse();
             
+            // Set graph parameters.
             graphElement.Width = Math.Abs(mouseDownPos.X - mouseUpPos.X);
             graphElement.Height = Math.Abs(mouseDownPos.Y - mouseUpPos.Y);
 

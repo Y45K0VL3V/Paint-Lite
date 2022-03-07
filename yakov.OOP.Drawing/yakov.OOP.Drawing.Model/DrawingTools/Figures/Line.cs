@@ -19,6 +19,7 @@ namespace yakov.OOP.Drawing.Model.DrawingTools.Figures
         {
             var graphElement = new System.Windows.Shapes.Line();
 
+            // Set graph parameters.
             graphElement.X1 = mouseDownPos.X;
             graphElement.Y1 = mouseDownPos.Y;
             graphElement.X2 = mouseUpPos.X;
